@@ -1,0 +1,121 @@
+/* Define Color Variables */
+:root {
+    --background-light: #f9f9f9;
+    --background-dark: #181818;
+    --text-light: #333;
+    --text-dark: #ccc;
+    --primary-light: #0077b6;
+    --primary-dark: #00b4d8;
+    --button-light: #00b4d8;
+    --button-dark: #0077b6;
+    --hover-light: #0077b6;
+    --hover-dark: #00b4d8;
+    --container-width: 85%;
+    --container-max-width: 1200px;
+}
+a {
+    text-decoration: none;
+  }
+  
+
+/* Default Styles (Light Mode) */
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Container */
+.container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: var(--primary-light);
+    color: white;
+    padding: 1rem 0;
+}
+
+header.dark-mode {
+    background: var(--primary-dark);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0077b6, #0096c7);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero.dark-mode {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+}
+
+.hero .btn {
+    background: var(--button-light);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero .btn:hover {
+    background: var(--hover-light);
+}
+
+body.dark-mode .hero .btn {
+    background: var(--button-dark);
+}
+
+body.dark-mode .hero .btn:hover {
+    background: var(--hover-dark);
+}
+/* Post Images */
+.post img {
+    width: 100%;  /* Make the image take up the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+    display: block; /* Remove any extra space below the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
